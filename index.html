@@ -4,43 +4,71 @@
     <meta charset="UTF-8">
     <title>Chess 21</title>
     <style>
-        /*div.letters{
-            position: absolute;
-            padding-top: 80%;
-            padding-left: 90%;
-        }*/
+        .number {
+            position: relative;
+            height: 0;
+            width: 0;
+            padding-left: 2px;
+            padding-top: 0;
+        }
+
+        .letters {
+            height: 0;
+            width: 0;
+            padding-top: 100%;
+        }
+
         .white {
-            height: 100px;
-            width: 100px;
+            display: flex;
+            height: 100%;
+            width: 100%;
             background-color: bisque;
-            border-width: 0;
-            position: revert;
         }
 
         .black {
-            height: 100px;
-            width: 100px;
+            display: flex;
+            height: 100%;
+            width: 100%;
             background-color: saddlebrown;
-            border-width: 0;
             color: white;
-            position: revert;
         }
 
         TABLE {
             border-collapse: collapse;
+            position: absolute;
+
         }
 
         TD, TH {
             padding: 0;
+            border-bottom: 0;
+            border-top: 0;
+            width: 100px;
+            height: 100px;
+        }
+
+        .image {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        img {
+            position: relative;
+            max-width: 100%;
+            max-height: 100%;
         }
     </style>
 </head>
 <body>
 <div class="borderChess">
-    <table>
+    <table class="tab">
         <tr>
             <td>
-                <div class="white"><div class="number">1</div></div>
+                <div class="white">
+                    <div class="number">1</div>
+                    <div class="image"><img src="image/kingW" alt="White King"></div>
+                </div>
             </td>
             <td>
                 <div class="black"></div>
@@ -66,7 +94,79 @@
         </tr>
         <tr>
             <td>
-                <div class="black"><div class="number">2</div></div>
+                <div class="black">
+                    <div class="number">2</div>
+                    <div class="image"><img src="image/PawnsW" alt="White Pawn"></div>
+                </div>
+            </td>
+            <td>
+                <div class="white">
+                    <div class="image"><img src="image/PawnsW" alt="White Pawns"></div>
+                </div>
+            </td>
+            <td>
+                <div class="black"></div>
+            </td>
+            <td>
+                <div class="white"></div>
+            </td>
+            <td>
+                <div class="black">
+                    <div class="image"><img src="image/RookW" alt="White Rook"></div>
+                </div>
+            </td>
+            <td>
+                <div class="white"></div>
+            </td>
+            <td>
+                <div class="black">
+                    <div class="image"><img src="image/PawnsW" alt="White Pawns"></div>
+                </div>
+            </td>
+            <td>
+                <div class="white">
+                    <div class="image"><img src="image/PawnsW" alt="White Pawns"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="white">
+                    <div class="number">3</div>
+                </div>
+            </td>
+            <td>
+                <div class="black"></div>
+            </td>
+            <td>
+                <div class="white">
+                    <div class="image"><img src="image/PawnsW" alt="White Pawns"></div>
+                </div>
+            </td>
+            <td>
+                <div class="black"></div>
+            </td>
+            <td>
+                <div class="white"></div>
+            </td>
+            <td>
+                <div class="black">
+                    <div class="image"><img src="image/BishopB" alt="Black bishop"></div>
+                </div>
+            </td>
+            <td>
+                <div class="white"></div>
+            </td>
+            <td>
+                <div class="black"></div>
+            </td>
+
+        </tr>
+        <tr>
+            <td>
+                <div class="black">
+                    <div class="number">4</div>
+                </div>
             </td>
             <td>
                 <div class="white"></div>
@@ -75,7 +175,11 @@
                 <div class="black"></div>
             </td>
             <td>
-                <div class="white"></div>
+                <div class="white">
+                    <div class="white">
+                        <div class="image"><img src="image/PawnsW" alt="White Pawns"></div>
+                    </div>
+                </div>
             </td>
             <td>
                 <div class="black"></div>
@@ -92,7 +196,9 @@
         </tr>
         <tr>
             <td>
-                <div class="white"><div class="number">3</div></div>
+                <div class="white">
+                    <div class="number">5</div>
+                </div>
             </td>
             <td>
                 <div class="black"></div>
@@ -119,10 +225,24 @@
         </tr>
         <tr>
             <td>
-                <div class="black"><div class="number">4</div></div>
+                <div class="black">
+                    <div class="number">6</div>
+                </div>
             </td>
             <td>
-                <div class="white"></div>
+                <div class="white">
+                    <div class="white">
+                        <div class="image"><img src="image/PawnsB" alt="Black Pawns"></div>
+                    </div>
+                </div>
+            </td>
+            <td>
+                <div class="black"></div>
+            </td>
+            <td>
+                <div class="white">
+                    <div class="image"><img src="image/PawnsB" alt="Black Pawns"></div>
+                </div>
             </td>
             <td>
                 <div class="black"></div>
@@ -134,18 +254,26 @@
                 <div class="black"></div>
             </td>
             <td>
-                <div class="white"></div>
-            </td>
-            <td>
-                <div class="black"></div>
-            </td>
-            <td>
-                <div class="white"></div>
+                <div class="white">
+                    <div class="image"><img src="image/BishopW" alt="White Bishop"></div>
+                </div>
             </td>
         </tr>
         <tr>
             <td>
-                <div class="white"><div class="number">5</div></div>
+                <div class="white">
+                    <div class="number">7</div>
+                    <div class="image">
+                        <img src="image/PawnsB" alt="Black Pawns"></div>
+                </div>
+            </td>
+            <td>
+                <div class="black"></div>
+            </td>
+            <td>
+                <div class="white">
+                    <div class="image"><img src="image/PawnsB" alt="Black Pawns"></div>
+                </div>
             </td>
             <td>
                 <div class="black"></div>
@@ -160,83 +288,37 @@
                 <div class="white"></div>
             </td>
             <td>
-                <div class="black"></div>
-            </td>
-            <td>
-                <div class="white"></div>
-            </td>
-            <td>
-                <div class="black"></div>
+                <div class="black">
+                    <div class="image"><img src="image/RookB" alt="Black Rook"></div>
+                </div>
             </td>
 
         </tr>
         <tr>
             <td>
-                <div class="black"><div class="number">6</div></div>
-            </td>
-            <td>
-                <div class="white"></div>
-            </td>
-            <td>
-                <div class="black"></div>
-            </td>
-            <td>
-                <div class="white"></div>
-            </td>
-            <td>
-                <div class="black"></div>
-            </td>
-            <td>
-                <div class="white"></div>
-            </td>
-            <td>
-                <div class="black"></div>
-            </td>
-            <td>
-                <div class="white"></div>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <div class="white"><div class="number">7</div></div>
-            </td>
-            <td>
-                <div class="black"></div>
-            </td>
-            <td>
-                <div class="white"></div>
-            </td>
-            <td>
-                <div class="black"></div>
-            </td>
-            <td>
-                <div class="white"></div>
-            </td>
-            <td>
-                <div class="black"></div>
-            </td>
-            <td>
-                <div class="white"></div>
-            </td>
-            <td>
-                <div class="black"></div>
-            </td>
-
-        </tr>
-        <tr>
-            <td>
-                <div class="black"><div class="number">8</div>
+                <div class="black">
+                    <div class="number">8</div>
                     <div class="letters">H</div>
                 </div>
             </td>
             <td>
                 <div class="white">
                     <div class="letters">G</div>
+                    <div class="image">
+                        <img src="image/KingB" alt="Black King">
+                    </div>
+
+
                 </div>
             </td>
             <td>
                 <div class="black">
                     <div class="letters">F</div>
+                    <div class="image">
+                        <img src="image/RookB" alt="Black Rook">
+                    </div>
+
+
                 </div>
             </td>
             <td>
@@ -257,11 +339,20 @@
             <td>
                 <div class="black">
                     <div class="letters">B</div>
+                    <div class="image">
+                        <img src="image/RookB" alt="Black Rook">
+                    </div>
+
+
                 </div>
             </td>
             <td>
                 <div class="white">
                     <div class="letters">A</div>
+                    <div class="image">
+                        <img src="image/BishopB" alt="Black bishop">
+                    </div>
+
                 </div>
             </td>
         </tr>
